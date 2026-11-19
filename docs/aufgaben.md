@@ -2,11 +2,11 @@
 
 Alles, was nur du tun kannst, mit genauem Klickweg. Erledigtes bitte abhaken oder kurz im Chat sagen.
 
-## Jetzt, für Etappe E0
+## Erledigt für Etappe E0 (19. November 2026)
 
-- [ ] **Repository öffentlich stellen.** Auf GitHub das Repository `gravitrax-map-designer` öffnen → Reiter **Settings** → links **General** → ganz nach unten zur **Danger Zone** → **Change repository visibility** → **Change to public** → Bestätigung eintippen. GitHub Pages ist nur für öffentliche Repositories kostenlos.
-- [ ] **GitHub Pages einschalten.** **Settings** → links **Pages** → unter **Build and deployment** bei **Source** den Eintrag **GitHub Actions** wählen. Sonst schlägt der Schritt „deploy" im Workflow fehl.
-- [ ] **Branch `feat/e0-grundgeruest` nach `main` übernehmen.** Entweder sagst du mir im Chat „merge", oder du klickst auf GitHub oben den gelben Hinweis **Compare & pull request** → **Create pull request** → **Merge pull request** → **Confirm merge**. Danach baut GitHub die App und veröffentlicht sie unter https://oscabuu.github.io/gravitrax-map-designer/ (dauert zwei bis drei Minuten, Fortschritt unter dem Reiter **Actions**).
+- [x] Repository öffentlich gestellt.
+- [x] GitHub Pages eingeschaltet (automatisch durch den ersten Workflow-Lauf).
+- [x] Branch `feat/e0-grundgeruest` nach `main` übernommen. Die App läuft unter https://oscabuu.github.io/gravitrax-map-designer/.
 
 ## Vor Etappe E2 (Generator)
 
