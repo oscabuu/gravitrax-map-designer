@@ -8,6 +8,12 @@ Alles, was nur du tun kannst, mit genauem Klickweg. Erledigtes bitte abhaken ode
 - [x] GitHub Pages eingeschaltet (automatisch durch den ersten Workflow-Lauf).
 - [x] Branch `feat/e0-grundgeruest` nach `main` übernommen. Die App läuft unter https://oscabuu.github.io/gravitrax-map-designer/.
 
+## Jetzt, für die Abnahme von E1
+
+- [ ] **Beispielbahn 1 nachbauen.** App öffnen, „Anleitung starten", und deine Tochter baut die Bahn Schritt für Schritt. Schick mir, was unklar oder falsch war, am besten ein Foto der fertigen Bahn.
+- [ ] **Drei Annahmen zu Bausteinen prüfen** (stehen im Katalog mit `verified: false`): Die Kurve lenkt die Kugel um 60 Grad, der Ausgang ist zwei Kanten weiter. Der Startstein hat einen Ausgang. Die Zielleiter hat einen Eingang und steht ohne Höhenstein auf der Platte. Stimmt das jeweils? Wenn nicht: Foto des Teils von oben.
+- [ ] **Eine Bahn aus dem Heft fotografieren**, am besten eine einfache Seite mit Draufsicht. Dann übertrage ich sie als zweite Beispielbahn und wir vergleichen die App-Anleitung mit dem Heft.
+
 ## Vor Etappe E2 (Generator)
 
 - [ ] **Teilenamen prüfen.** Die Tabelle in `docs/konzept.md`, Abschnitt „Teile-Katalog und Teileliste", hat fünf unklare Symbole. Teile auf die Anleitungsseite legen und mir die Namen von der Verpackung oder aus dem Heft schicken.

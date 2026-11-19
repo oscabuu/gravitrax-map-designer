@@ -29,8 +29,10 @@ Es gibt **keinen Editor** zum Selberplanen, auch später nicht.
 ```
 src/
   model/        reine Logik: Raster (hex.ts), Schienen (rail.ts), Grundplatte (plate.ts),
-                später Katalog, Generator, Prüfer, Anleitungs-Erzeuger
-  data/         JSON: Teile-Katalog, Set-Inhalte, Gefälle-Regeln
+                Katalog (catalog.ts), Bahn (track.ts), Prüfer (validate.ts),
+                Anleitungs-Erzeuger (steps.ts); später Generator
+  data/         JSON: Teile-Katalog (parts.json), Set-Inhalte (sets.json), Regelwerte (rules.json),
+                Beispielbahnen (tracks/*.json)
   view/         React-Komponenten, nur Darstellung
   App.tsx       Einstieg der Oberfläche
 docs/
@@ -60,4 +62,4 @@ npm run build      Typprüfung und Produktions-Build nach dist/
 
 ## 6. Etappen
 
-E0 Grundgerüst (dieser Stand) → E1 Modell und Zeichnung → E2 Generator klein → E3 Kindermodus → E4 Aktionssteine und Feinschliff = Version 1.0. Jede Etappe endet mit einer Abnahme durch den Nutzer; Details und Abnahmekriterien in `docs/konzept.md`, Abschnitt „Etappen".
+E0 Grundgerüst → E1 Modell und Zeichnung (dieser Stand) → E2 Generator klein → E3 Kindermodus → E4 Aktionssteine und Feinschliff = Version 1.0. Jede Etappe endet mit einer Abnahme durch den Nutzer; Details und Abnahmekriterien in `docs/konzept.md`, Abschnitt „Etappen".

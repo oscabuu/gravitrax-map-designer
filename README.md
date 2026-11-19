@@ -6,7 +6,7 @@ Inoffizielles Hobbyprojekt. GraviTrax ist eine Marke von Ravensburger.
 
 ## App
 
-https://oscabuu.github.io/gravitrax-map-designer/ — Arbeitsstand E0 (Grundgerüst). Die Adresse funktioniert, sobald GitHub Pages für das Repository eingeschaltet ist (siehe `docs/aufgaben.md`).
+https://oscabuu.github.io/gravitrax-map-designer/ — Arbeitsstand E1: Beispielbahn 1 als Schritt-für-Schritt-Anleitung.
 
 ## Entwicklung
 

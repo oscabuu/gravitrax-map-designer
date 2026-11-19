@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "sets": [
+    {
+      "id": "starter",
+      "name": "Starter-Set",
+      "pieces": 124,
+      "contents": {
+        "grundplatte": 4,
+        "ebene": 2,
+        "hoehe_gross": 40,
+        "hoehe_klein": 12,
+        "kurve": 21,
+        "schiene_kurz": 9,
+        "schiene_mittel": 6,
+        "schiene_lang": 3,
+        "startstein": 1,
+        "zielleiter": 1,
+        "freifall": 1,
+        "weiche": 2,
+        "gauss_kanone": 1,
+        "faenger": 2,
+        "wirbel": 1,
+        "splash": 1,
+        "unklar_mulde": 3,
+        "unklar_rinnen": 3,
+        "unklar_bogen": 1,
+        "unklar_gruen_glatt": 1,
+        "unklar_rand": 1,
+        "kugel": 6,
+        "heft": 2
+      }
+    }
+  ]
+}

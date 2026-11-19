@@ -29,6 +29,12 @@ body {
   display: flex;
 }
 
+#root:has(.step) {
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
 .app {
   flex: 1;
   display: flex;
@@ -56,6 +62,10 @@ body {
   width: min(100%, 560px);
 }
 
+.app__plate .track {
+  max-height: 52vh;
+}
+
 .plate {
   width: 100%;
   height: auto;
@@ -79,4 +89,315 @@ body {
   margin-top: auto;
   color: var(--muted);
   font-size: 0.85rem;
+}
+
+/* Bahn-Zeichnung */
+.track {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.rail {
+  stroke: #6e6a60;
+  stroke-linecap: round;
+}
+
+.cell__tile {
+  fill: #ece8de;
+  stroke: #8d8676;
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+.tile__track {
+  fill: none;
+  stroke: #4a4640;
+  stroke-linecap: round;
+}
+
+.tile__ball {
+  fill: #c0392b;
+  stroke: #7b241c;
+  stroke-width: 1;
+}
+
+.tile__rung {
+  stroke: #4a4640;
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.tile__label {
+  fill: var(--muted);
+  font-weight: 600;
+}
+
+.stack__large circle {
+  fill: #9a9589;
+  stroke: #5c584f;
+  stroke-width: 1.5;
+}
+
+.stack__large text {
+  fill: #fff;
+  font-weight: 700;
+}
+
+.stack__small circle {
+  fill: #2b2b2b;
+  stroke: #000;
+  stroke-width: 1.5;
+}
+
+.stack__small text {
+  fill: #fff;
+  font-weight: 700;
+}
+
+.is-new .cell__tile,
+.rail.is-new {
+  stroke: var(--accent);
+  stroke-width: 4;
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+.is-new .cell__tile {
+  fill: #e4f1d8;
+}
+
+.rail.is-new {
+  stroke: var(--accent);
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
+/* Teile-Symbole */
+.icon__large {
+  fill: #9a9589;
+  stroke: #5c584f;
+  stroke-width: 2;
+}
+
+.icon__small {
+  fill: #2b2b2b;
+  stroke: #000;
+  stroke-width: 2;
+}
+
+.icon__plate polygon {
+  fill: var(--plate);
+  stroke: var(--plate-edge);
+  stroke-width: 1.5;
+}
+
+.icon__rail {
+  stroke: #6e6a60;
+  stroke-linecap: round;
+}
+
+.icon__ball {
+  fill: #c0392b;
+  stroke: #7b241c;
+  stroke-width: 2;
+}
+
+/* Übersicht */
+.usage {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.25rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Schritte */
+.step {
+  width: min(100%, 760px);
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.step__counter {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.step__title {
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: 1.3;
+}
+
+.step__parts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.part-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.9rem 0.4rem 0.5rem;
+  border-radius: 999px;
+  background: #fff;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.08);
+}
+
+.part-chip__count {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.part-chip__name {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.step__drawing {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.step__drawing .track {
+  width: 100%;
+  height: 100%;
+}
+
+.step__nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.step__dots {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.step__dots li {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: #cfcabd;
+}
+
+.step__dots li.is-done {
+  background: #9a9589;
+}
+
+.step__dots li.is-current {
+  background: var(--accent);
+  transform: scale(1.3);
+}
+
+/* Große Knöpfe, mindestens 64 px hoch und breit */
+.big-button {
+  min-width: 4rem;
+  min-height: 4rem;
+  padding: 0 1.5rem;
+  border: none;
+  border-radius: 1rem;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 1.5rem;
+  font-weight: 700;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 0.12);
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.big-button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.big-button--accent {
+  background: var(--accent);
+  color: #fff;
+}
+
+.big-button--wide {
+  width: min(100%, 420px);
+}
+
+.big-button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+/* Flache Bildschirme (Handy quer): Text links, Zeichnung rechts */
+@media (max-height: 520px) {
+  .step {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+      'counter drawing'
+      'title drawing'
+      'parts drawing'
+      'nav nav';
+    column-gap: 1rem;
+    text-align: left;
+    align-items: start;
+  }
+
+  .step__counter {
+    grid-area: counter;
+  }
+
+  .step__title {
+    grid-area: title;
+    font-size: 1.25rem;
+  }
+
+  .step__parts {
+    grid-area: parts;
+    justify-content: flex-start;
+  }
+
+  .step__drawing {
+    grid-area: drawing;
+    height: 100%;
+  }
+
+  .step__nav {
+    grid-area: nav;
+  }
+
+  .app__header h1 {
+    font-size: 1.6rem;
+  }
 }

@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "heights": {
+    "smallPerLarge": 2,
+    "verified": false,
+    "note": "Annahme: zwei kleine Höhensteine sind so hoch wie ein großer. Messung offen, siehe docs/aufgaben.md."
+  },
+  "slope": {
+    "minDropLargeByRail": { "kurz": 1, "mittel": 1, "lang": 2 },
+    "maxSameHeightTiles": 3,
+    "verified": false,
+    "note": "Startwerte aus docs/konzept.md, Abschnitt Gefälle-Regeln. Werden mit Rolltests angepasst."
+  }
+}
