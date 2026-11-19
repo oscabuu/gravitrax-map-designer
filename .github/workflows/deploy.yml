@@ -1,6 +1,7 @@
 # Testet und baut bei jedem Push und Pull Request.
 # Auf main wird das Ergebnis zusätzlich nach GitHub Pages veröffentlicht.
-# Voraussetzung einmalig: Repository-Einstellungen, Pages, Source = "GitHub Actions".
+# Pages wird beim ersten Lauf automatisch eingeschaltet (configure-pages, enablement).
+# Falls das fehlschlägt: Repository-Einstellungen, Pages, Source = "GitHub Actions".
 name: Testen, bauen, veröffentlichen
 
 on:
@@ -30,6 +31,11 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run build
+      - name: GitHub Pages einschalten, falls noch aus
+        if: github.ref == 'refs/heads/main'
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - name: Build-Ergebnis für Pages ablegen
         if: github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v3
