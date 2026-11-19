@@ -1,0 +1,82 @@
+:root {
+  color-scheme: light;
+  --bg: #f4f1ea;
+  --ink: #26322a;
+  --muted: #5f6b62;
+  --plate: #d9d4c7;
+  --plate-edge: #8d8676;
+  --accent: #6aa84f;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--ink);
+  -webkit-text-size-adjust: 100%;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+}
+
+.app {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: max(1rem, env(safe-area-inset-top)) max(1rem, env(safe-area-inset-right))
+    max(1rem, env(safe-area-inset-bottom)) max(1rem, env(safe-area-inset-left));
+  text-align: center;
+}
+
+.app__header h1 {
+  font-size: 2.4rem;
+  margin: 0.5rem 0 0;
+  letter-spacing: 0.02em;
+}
+
+.app__lead {
+  margin: 0.5rem 0 0;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.app__plate {
+  width: min(100%, 560px);
+}
+
+.plate {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.plate__cell {
+  fill: var(--plate);
+  stroke: var(--plate-edge);
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+.app__hint {
+  color: var(--muted);
+  font-size: 1rem;
+  margin: 0.75rem 0 0;
+}
+
+.app__footer {
+  margin-top: auto;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
