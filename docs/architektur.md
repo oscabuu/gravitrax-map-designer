@@ -27,10 +27,24 @@ Grund: Generator, Prüfer und Anleitungs-Erzeuger werden mit tausenden Seeds aut
 
 Eine Schiene verbindet zwei Felder auf einer geraden Rasterlinie und überbrückt 1 (kurz), 2 (mittel) oder 3 (lang) freie Felder. Angabe des Nutzers. Direkt benachbarte Bausteine brauchen keine Schiene.
 
+## Katalog, Sets, Regeln (src/data)
+
+- `parts.json`: ein Eintrag je Teil mit `id`, `name` (wie auf der Verpackung), `group`, `verified` und bei Bausteinen `portKind` (`start`, `end`, `through`) und `ports` (Richtungen 0..5 bei Drehung 0). Drehung um eine Stufe verschiebt alle Anschlüsse um eine Richtung.
+- `sets.json`: Set-Inhalte als `partId: Anzahl`; der Test prüft, dass die Summe der angegebenen Teilezahl entspricht.
+- `rules.json`: `heights.smallPerLarge` und die Gefälle-Startwerte `slope.minDropLargeByRail`, `slope.maxSameHeightTiles`. Alles mit `verified`-Kennzeichen.
+
+## Bahn (src/model/track.ts)
+
+Eine Bahn ist reine Daten: `plates` (Ursprung je Grundplatte), `cells` (Feld, Stapel aus `large`/`small`, optional `tile` mit `type` und `rotation`), `rails` (`from`, `to`) und `path` (Feldschlüssel vom Start zum Ziel). Beispiel in `src/data/tracks/beispiel-1.json`. Der Prüfer (`validate.ts`) liefert Befunde mit Code und deutschem Satz; der Anleitungs-Erzeuger (`steps.ts`) baut daraus die Schritte: Platte, dann dem Kugelweg folgend je Feld Stapel und Baustein, nach jedem erreichten Feld die Schiene dorthin, zuletzt die Kugel.
+
+## Zeichnung (src/view)
+
+`TrackView` zeichnet Platten, Schienen (Kantenmitte zu Kantenmitte), Bausteine (`TileGlyph`: Rinne als Kurve durch den Mittelpunkt, Startstein mit drei Kugeln, Zielleiter mit Sprossen) und die Höhe als Zahl in den unteren Ecken: links grau = große Steine, rechts schwarz = kleine. Ecken kreuzt keine Rinne, darum bleiben die Zahlen lesbar. Jedes Element hat einen Zustand `shown`, `new` oder `hidden`; der Schritt-Bildschirm leitet ihn aus den Schritten ab.
+
 ## Noch offen
 
 - Verhältnis kleiner zu großer Höhenstein.
-- Ein- und Ausgänge je Baustein (kommt als Katalogdaten in E1).
+- Ein- und Ausgänge je Baustein: Annahmen für Startstein, Kurve und Zielleiter stehen im Katalog mit `verified: false`; alle anderen Bausteine noch ohne Anschlüsse.
 - Gefälle-Regeln als Zahlen (Startwerte im Konzept, Messung durch den Nutzer).
 
 ## Werkzeuge

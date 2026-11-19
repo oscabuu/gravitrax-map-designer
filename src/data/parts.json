@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "source": "Starter-Set-Anleitung Seite 3 (Foto vom 19.11.2026) und docs/konzept.md. Anschlüsse mit verified=false sind Annahmen und stehen in docs/aufgaben.md zur Prüfung.",
+  "parts": [
+    { "id": "grundplatte", "name": "Grundplatte", "group": "grundplatte", "verified": true },
+    { "id": "ebene", "name": "Transparente Ebene", "group": "grundplatte", "verified": true, "note": "19 Felder laut Zeichnung. Erst ab Version 1.1." },
+    { "id": "hoehe_gross", "name": "Großer Höhenstein", "group": "hoehe", "verified": true },
+    { "id": "hoehe_klein", "name": "Kleiner Höhenstein", "group": "hoehe", "verified": true },
+    { "id": "schiene_kurz", "name": "Schiene kurz", "group": "schiene", "gap": 1, "verified": true },
+    { "id": "schiene_mittel", "name": "Schiene mittel", "group": "schiene", "gap": 2, "verified": true },
+    { "id": "schiene_lang", "name": "Schiene lang", "group": "schiene", "gap": 3, "verified": true },
+    { "id": "startstein", "name": "Startstein", "group": "baustein", "portKind": "start", "ports": [0], "verified": false, "note": "Annahme: ein Ausgang. Am Teil prüfen." },
+    { "id": "zielleiter", "name": "Zielleiter", "group": "baustein", "portKind": "end", "ports": [0], "verified": false, "note": "Annahme: ein Eingang, steht ohne Höhenstein auf der Platte." },
+    { "id": "kurve", "name": "Kurve", "group": "baustein", "portKind": "through", "ports": [0, 2], "verified": false, "note": "Annahme: Ausgang zwei Kanten weiter, also Drehung um 60 Grad. Am Teil prüfen." },
+    { "id": "freifall", "name": "Freifall", "group": "aktionsstein", "verified": false, "note": "Anschlüsse noch nicht erfasst. Ab E4." },
+    { "id": "weiche", "name": "Weiche", "group": "aktionsstein", "verified": false, "note": "Zuordnung zum Symbol vermutet (grüner Hebel). Ab E4." },
+    { "id": "gauss_kanone", "name": "Gauß-Kanone", "group": "aktionsstein", "verified": false, "note": "Zuordnung zum Symbol vermutet. Ab E4." },
+    { "id": "faenger", "name": "Fänger", "group": "aktionsstein", "verified": false, "note": "Zuordnung zum Symbol vermutet (grüne Schale)." },
+    { "id": "wirbel", "name": "Wirbel", "group": "aktionsstein", "verified": false, "note": "Zuordnung zum Symbol vermutet." },
+    { "id": "splash", "name": "Splash", "group": "aktionsstein", "verified": false, "note": "Zuordnung zum Symbol vermutet." },
+    { "id": "unklar_mulde", "name": "Unklar: Sechseck-Mulde mit drei Öffnungen", "group": "baustein", "verified": false, "note": "Seite 3, Zeile 1, 2. Bild. Vermutlich Kreuzung." },
+    { "id": "unklar_rinnen", "name": "Unklar: drei Rinnen treffen sich", "group": "baustein", "verified": false, "note": "Seite 3, Zeile 4, 1. Bild." },
+    { "id": "unklar_bogen", "name": "Unklar: grüner Bogen", "group": "aktionsstein", "verified": false, "note": "Seite 3, Zeile 4, 2. Bild." },
+    { "id": "unklar_gruen_glatt", "name": "Unklar: grünes Sechseck, glatt", "group": "baustein", "verified": false, "note": "Seite 3, Zeile 4, 3. Bild. Vermutlich Zieleinsatz." },
+    { "id": "unklar_rand", "name": "Unklar: Sechseck-Rand", "group": "baustein", "verified": false, "note": "Seite 3, Zeile 5, 1. Bild." },
+    { "id": "kugel", "name": "Kugel", "group": "sonstiges", "verified": true },
+    { "id": "heft", "name": "Heft", "group": "sonstiges", "verified": true }
+  ]
+}
