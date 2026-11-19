@@ -1,0 +1,13 @@
+# Abhängigkeiten und Build
+node_modules/
+dist/
+.vite/
+*.tsbuildinfo
+coverage/
+
+# Editor und System
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.log
